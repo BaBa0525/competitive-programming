@@ -2,9 +2,9 @@
 #include <iostream>
 #include <vector>
 
-#define dbg(x)                                                                \
-  std::cout << "[" << __FILE__ << ":" << __LINE__ << "] " << #x << " = " << x \
-            << std::endl;
+#define dbg(x)                                                                 \
+  std::cout << "[" << __FILE__ << ":" << __LINE__ << " (" << __func__ << ")] " \
+            << #x << " = " << x << std::endl;
 
 using std::size_t;
 
@@ -27,7 +27,7 @@ void Terrace::merge(size_t a, size_t b) {
   b = find(b);
   if (a == b) return;
 
-  if (a < b) {
+  if (head[a] < head[b]) {
     head[a] += head[b];
     head[b] = a;
     return;
