@@ -23,7 +23,7 @@ class FenwickTree {
   int lnzb(int n);
   int prefix_sum(int n);
 
-  /* range sum of [s, e) */
+  /* range sum of [s, e] */
   int range_sum(int s, int e);
   void update(int n, int val);
 
@@ -55,7 +55,7 @@ int FenwickTree::prefix_sum(int n) {
 }
 
 int FenwickTree::range_sum(int s, int e) {
-  return prefix_sum(e) - prefix_sum(s);
+  return prefix_sum(e) - prefix_sum(s - 1);
 }
 
 int main() {
