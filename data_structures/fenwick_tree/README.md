@@ -6,8 +6,9 @@ Prefix sum or range sum with all the actions in complexity `O(logn)`.
 
 Complexity:
 
+- initial build `O(n)`
 - query `O(logn)`
-- query `O(logn)`
+- update `O(logn)`
 
 ## Comparison
 
@@ -24,6 +25,7 @@ for (int i = 0; i < s.size(); i++) {
 
 Complexity:
 
+- initial build `O(n)`
 - query `O(1)`
 - update `O(n)`
 
