@@ -69,10 +69,6 @@ int main() {
     auto [from, to, dist] = pq.top();
     pq.pop();
 
-    // dbg(from);
-    // dbg(ds.find(from));
-    // dbg(to);
-    // dbg(ds.find(to));
     if (ds.find(from) == ds.find(to)) continue;
     ds.merge(from, to);
     std::cout << from << ' ' << to << '\n';
